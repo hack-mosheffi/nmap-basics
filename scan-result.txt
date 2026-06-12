@@ -1,0 +1,58 @@
+# Nmap 7.99 scan initiated Fri Jun 12 22:37:59 2026 as: /usr/lib/nmap/nmap --privileged -A -T4 -oN scan-result.txt scanme.nmap.org
+Nmap scan report for scanme.nmap.org (45.33.32.156)
+Host is up (0.21s latency).
+Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2f
+Not shown: 989 closed tcp ports (reset)
+PORT      STATE    SERVICE      VERSION
+21/tcp    open     tcpwrapped
+22/tcp    open     ssh          OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 ac:00:a0:1a:82:ff:cc:55:99:dc:67:2b:34:97:6b:75 (DSA)
+|   2048 20:3d:2d:44:62:2a:b0:5a:9d:b5:b3:05:14:c2:a6:b2 (RSA)
+|   256 96:02:bb:5e:57:54:1c:4e:45:2f:56:4c:4a:24:b2:57 (ECDSA)
+|_  256 33:fa:91:0f:e0:e1:7b:1f:6d:05:a2:b0:f1:54:41:56 (ED25519)
+25/tcp    filtered smtp
+80/tcp    open     http         Apache httpd 2.4.7 ((Ubuntu))
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-title: Go ahead and ScanMe!
+|_http-favicon: Nmap Project
+135/tcp   filtered msrpc
+139/tcp   filtered netbios-ssn
+179/tcp   filtered bgp
+445/tcp   filtered microsoft-ds
+646/tcp   filtered ldp
+9929/tcp  open     nping-echo   Nping echo
+31337/tcp open     tcpwrapped
+Device type: general purpose|router
+Running (JUST GUESSING): Linux 5.X|4.X|3.X|2.6.X (89%), MikroTik RouterOS 7.X (89%)
+OS CPE: cpe:/o:linux:linux_kernel:5 cpe:/o:mikrotik:routeros:7 cpe:/o:linux:linux_kernel:5.6.3 cpe:/o:linux:linux_kernel:4.19 cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:6
+Aggressive OS guesses: Linux 5.0 - 5.14 (89%), MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3) (89%), Linux 4.19 (88%), Linux 4.15 - 5.19 (88%), Linux 3.10 - 4.11 (87%), Linux 4.19 - 5.15 (86%), OpenWrt 21.02 (Linux 5.4) (86%), Linux 3.2 - 4.14 (86%), Linux 2.6.32 - 3.13 (85%), Linux 5.1 - 5.15 (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 23 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 53/tcp)
+HOP RTT       ADDRESS
+1   1.56 ms   reliance.reliance (192.168.29.1)
+2   11.55 ms  10.199.32.1
+3   15.48 ms  172.31.0.144
+4   13.00 ms  192.168.68.142
+5   11.76 ms  172.26.77.164
+6   13.34 ms  172.26.77.130
+7   11.74 ms  192.168.68.132
+8   ... 9
+10  24.75 ms  103.198.140.64
+11  227.95 ms 49.45.4.103
+12  233.12 ms 49.45.4.103
+13  266.47 ms ae1.3501.edge7.LosAngeles1.net.lumen.tech (4.69.219.41)
+14  264.50 ms ae2.3601.edge7.LosAngeles1.net.lumen.tech (4.69.219.45)
+15  243.83 ms ae3.r22.lax01.mag.netarch.akamai.com (23.192.3.96)
+16  246.17 ms ae3.r22.lax01.mag.netarch.akamai.com (23.192.3.96)
+17  250.01 ms ae0.r22.lax01.icn.netarch.akamai.com (23.192.3.73)
+18  237.61 ms ae17.r02.sjc01.icn.netarch.akamai.com (23.193.112.211)
+19  253.28 ms ae2.r11.sjc01.ien.netarch.akamai.com (23.207.232.39)
+20  ... 22
+23  259.82 ms scanme.nmap.org (45.33.32.156)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jun 12 22:38:40 2026 -- 1 IP address (1 host up) scanned in 41.93 seconds
